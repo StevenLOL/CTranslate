@@ -47,7 +47,8 @@ This project is also a convenient way to load OpenNMT models and translate texts
 
 Here is a very simple example:
 
-```cpp
+```
+//demo.cc
 #include <iostream>
 
 #include <onmt/TranslatorFactory.h>
@@ -62,6 +63,14 @@ int main()
 
   return 0;
 }
+
+Insert following to ProjectRoot/MamkeLists.txt
+
+add_executable(demo src/demo.cc)
+target_link_libraries(demo ${PROJECT_NAME})
+
+Then in build folder build it again.
+
 
 ```
 
