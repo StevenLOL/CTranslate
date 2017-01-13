@@ -17,6 +17,16 @@ It supports CPU OpenNMT models. You can convert GPU trained models with the [`re
 $ mkdir build
 $ cd build
 $ cmake -DEIGEN_ROOT=<path to Eigen library> ..
+
+
+#if eigen is not found then you will have this error:
+# /data/gits/OpenNMT/CTranslate/include/onmt/Eigen/MatrixBatch.h:3:23: fatal error: Eigen/Dense: No such file or directory
+compilation terminated.
+
+#Solution:
+$ sudo apt install libeigen3-dev
+$ cmake -DEIGEN_ROOT=/usr/ ..
+
 ```
 
 It will produce the dynamic library `libonmt.so` and the translation client `cli/translate`.
