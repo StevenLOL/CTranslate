@@ -48,7 +48,7 @@ This project is also a convenient way to load OpenNMT models and translate texts
 Here is a very simple example:
 
 ```
-//demo.cc
+//        src/demo.cc
 #include <iostream>
 
 #include <onmt/TranslatorFactory.h>
